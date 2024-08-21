@@ -15,6 +15,9 @@ export const Contact = () => {
     const handleContact = (e) => {
 
         e.preventDefault();
+
+        console.log(formData.reason);
+        
         fetch("/api/send-email", {
             method: "POST",
             headers: {

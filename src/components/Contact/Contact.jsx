@@ -15,7 +15,7 @@ export const Contact = () => {
     const handleContact = (e) => {
 
         e.preventDefault();
-        fetch("/send-email", {
+        fetch("/api/send-email", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

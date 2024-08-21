@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Navbar } from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import linkedin from '../../images/linkedin.jpg';
+import { Helmet } from "react-helmet";
 
 export const Contact = () => {
 
@@ -40,15 +41,18 @@ export const Contact = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Contact Me</title>
+            </Helmet>
             <Navbar/>
             <div className='bg-white font-serif text-black flex flex-col ml-[5rem] mr-[5rem] mt-[5rem] pr-[2rem] border rounded-md'>
                 <div className='flex flex-row mt-10 ml-[2rem]'> 
                     <h1 className='text-4xl font-bold mr-auto'>Let's Get In Touch!</h1>
                     <img
-                    onClick={handleLinkedin}
-                    src={linkedin}
-                    alt=""
-                    className='w-12 h-12'
+                        onClick={handleLinkedin}
+                        src={linkedin}
+                        alt=""
+                        className='w-12 h-12 cursor-pointer'
                     />
                 </div>
                 <form onSubmit={handleContact} className='flex flex-col ml-[2rem]'>

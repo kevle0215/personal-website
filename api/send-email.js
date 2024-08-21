@@ -17,7 +17,7 @@ export default async function handler(req, res) {
             from: email,
             to: process.env.EMAIL_USER,
             subject: `New message from ${name}`,
-            text: reason,
+            text: email + reason,
         };
 
         try {

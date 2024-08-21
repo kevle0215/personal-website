@@ -2,11 +2,10 @@ const nodemailer = require("nodemailer");
 
 export default async function handler(req, res) {
 
-    console.log(req)
     if (req.method === "POST") {
         const { name, email, message } = req.body;
 
-        console.log(message)
+        console.log("THIS IS THE MSSAGE", message);
 
         const transporter = nodemailer.createTransport({
             service: "Gmail",
